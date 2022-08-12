@@ -30,6 +30,11 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "otherBranch": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "api": {
@@ -72,6 +77,14 @@
         {
           "category": "function",
           "resourceName": "register",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "otherBranch",
           "attributes": [
             "Name",
             "Arn"

@@ -35,6 +35,13 @@
       "permissions": {
         "setting": "open"
       }
+    },
+    "/otherbranch": {
+      "name": "/otherbranch",
+      "lambdaFunction": "otherBranch",
+      "permissions": {
+        "setting": "open"
+      }
     }
   }
 }
