@@ -43,5 +43,93 @@
         "reactamplifytasks923567dc": {}
       }
     }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactamplifytasks-test-111944-authRole",
+      "UnauthRoleArn": "arn:aws:iam::857067256181:role/amplify-reactamplifytasks-test-111944-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::857067256181:role/amplify-reactamplifytasks-test-111944-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactamplifytasks-test-111944-deployment",
+      "UnauthRoleName": "amplify-reactamplifytasks-test-111944-unauthRole",
+      "StackName": "amplify-reactamplifytasks-test-111944",
+      "StackId": "arn:aws:cloudformation:us-east-1:857067256181:stack/amplify-reactamplifytasks-test-111944/94bebb60-1a5a-11ed-be4c-12638d1199f5",
+      "AmplifyAppId": "d2drue618o7z2u"
+    },
+    "categories": {
+      "auth": {
+        "reactamplifytasks923567dc": {}
+      },
+      "function": {
+        "funcHello": {
+          "deploymentBucketName": "amplify-reactamplifytasks-test-111944-deployment",
+          "s3Key": "amplify-builds/funcHello-41555942657255757858-build.zip"
+        },
+        "funcTest": {
+          "deploymentBucketName": "amplify-reactamplifytasks-test-111944-deployment",
+          "s3Key": "amplify-builds/funcTest-2f513536374c63414a6d-build.zip"
+        },
+        "getTasks": {
+          "deploymentBucketName": "amplify-reactamplifytasks-test-111944-deployment",
+          "s3Key": "amplify-builds/getTasks-42735572325768747a68-build.zip"
+        },
+        "authTest": {
+          "deploymentBucketName": "amplify-reactamplifytasks-test-111944-deployment",
+          "s3Key": "amplify-builds/authTest-7038794c533559364c51-build.zip"
+        },
+        "saveTask": {
+          "deploymentBucketName": "amplify-reactamplifytasks-test-111944-deployment",
+          "s3Key": "amplify-builds/saveTask-73326663384b4737762f-build.zip"
+        },
+        "register": {
+          "deploymentBucketName": "amplify-reactamplifytasks-test-111944-deployment",
+          "s3Key": "amplify-builds/register-513264766848676b7773-build.zip"
+        }
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactamplifytasks-prod-112819-authRole",
+      "UnauthRoleArn": "arn:aws:iam::857067256181:role/amplify-reactamplifytasks-prod-112819-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::857067256181:role/amplify-reactamplifytasks-prod-112819-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
+      "UnauthRoleName": "amplify-reactamplifytasks-prod-112819-unauthRole",
+      "StackName": "amplify-reactamplifytasks-prod-112819",
+      "StackId": "arn:aws:cloudformation:us-east-1:857067256181:stack/amplify-reactamplifytasks-prod-112819/c7cf6f80-1a5b-11ed-953f-12c550daf7d9",
+      "AmplifyAppId": "d2drue618o7z2u"
+    },
+    "categories": {
+      "auth": {
+        "reactamplifytasks923567dc": {}
+      },
+      "function": {
+        "funcHello": {
+          "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
+          "s3Key": "amplify-builds/funcHello-41555942657255757858-build.zip"
+        },
+        "funcTest": {
+          "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
+          "s3Key": "amplify-builds/funcTest-2f513536374c63414a6d-build.zip"
+        },
+        "getTasks": {
+          "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
+          "s3Key": "amplify-builds/getTasks-42735572325768747a68-build.zip"
+        },
+        "authTest": {
+          "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
+          "s3Key": "amplify-builds/authTest-7038794c533559364c51-build.zip"
+        },
+        "saveTask": {
+          "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
+          "s3Key": "amplify-builds/saveTask-73326663384b4737762f-build.zip"
+        },
+        "register": {
+          "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
+          "s3Key": "amplify-builds/register-513264766848676b7773-build.zip"
+        }
+      }
+    }
   }
 }
