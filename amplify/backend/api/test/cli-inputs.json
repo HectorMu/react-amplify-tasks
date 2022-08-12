@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "paths": {
+    "/hello": {
+      "name": "/hello",
+      "lambdaFunction": "funcHello",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/test": {
+      "name": "/test",
+      "lambdaFunction": "funcTest",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/tasks": {
+      "name": "/tasks",
+      "lambdaFunction": "getTasks",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/tasks/save": {
+      "name": "/tasks/save",
+      "lambdaFunction": "saveTask",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/register": {
+      "name": "/register",
+      "lambdaFunction": "register",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

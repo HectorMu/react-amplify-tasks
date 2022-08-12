@@ -1,0 +1,47 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactamplifytasks-dev-131319-authRole",
+      "UnauthRoleArn": "arn:aws:iam::857067256181:role/amplify-reactamplifytasks-dev-131319-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::857067256181:role/amplify-reactamplifytasks-dev-131319-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+      "UnauthRoleName": "amplify-reactamplifytasks-dev-131319-unauthRole",
+      "StackName": "amplify-reactamplifytasks-dev-131319",
+      "StackId": "arn:aws:cloudformation:us-east-1:857067256181:stack/amplify-reactamplifytasks-dev-131319/f7617930-0ea0-11ed-b140-125c955d7363",
+      "AmplifyAppId": "d2drue618o7z2u",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-reactamplifytasks-dev-131319-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "funcHello": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/funcHello-41555942657255757858-build.zip"
+        },
+        "funcTest": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/funcTest-2f513536374c63414a6d-build.zip"
+        },
+        "getTasks": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/getTasks-42735572325768747a68-build.zip"
+        },
+        "saveTask": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/saveTask-73326663384b4737762f-build.zip"
+        },
+        "authTest": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/authTest-7038794c533559364c51-build.zip"
+        },
+        "register": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/register-513264766848676b7773-build.zip"
+        }
+      },
+      "auth": {
+        "reactamplifytasks923567dc": {}
+      }
+    }
+  }
+}
