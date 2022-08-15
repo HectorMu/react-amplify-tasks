@@ -30,7 +30,6 @@ export const Signup = () => {
         password,
         attributes: { email },
       });
-      console.log(res);
 
       const newUser = {
         id: res.userSub,
@@ -38,8 +37,9 @@ export const Signup = () => {
         email,
       };
 
-      const registerRes = await API.post("test", "/register/", {
-        body: JSON.stringify({ userData: newUser }),
+      const registerRes = await API.post("test", "/register", {
+        body: { userData: newUser },
+        headers: { "Content-Type": "application/json" },
       });
 
       console.log(registerRes);

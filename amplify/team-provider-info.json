@@ -36,7 +36,11 @@
         },
         "register": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/register-513264766848676b7773-build.zip"
+          "s3Key": "amplify-builds/register-5332694d527074507837-build.zip"
+        },
+        "otherBranch": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/otherBranch-7345723438724e6f7770-build.zip"
         }
       },
       "auth": {
