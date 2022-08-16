@@ -35,6 +35,20 @@
       "permissions": {
         "setting": "open"
       }
+    },
+    "/deleteTask": {
+      "name": "/deleteTask",
+      "lambdaFunction": "deleteTask",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/updateTask": {
+      "name": "/updateTask",
+      "lambdaFunction": "updateTask",
+      "permissions": {
+        "setting": "open"
+      }
     }
   }
 }

@@ -44,8 +44,7 @@ export const Profile = () => {
       </Accordion>
       {greeting && (
         <Typography align="center" sx={{ marginTop: "30px" }}>
-          {JSON.stringify(greeting)} A lambda function has sended a greet to
-          you!
+          A lambda function has sended a greet to you!
         </Typography>
       )}
     </Container>

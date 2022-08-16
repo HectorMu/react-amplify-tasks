@@ -32,11 +32,9 @@ pool.query = promisify(pool.query);
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
 exports.handler = async (event) => {
-  const userSub = event.requestContext.authorizer.claims.sub;
+  const taskId = event.queryStringParameters.id;
 
-  const userTasks = await pool.query("select * from task where fk_user = ?", [
-    userSub,
-  ]);
+  await pool.query("delete from task where id = ?", [taskId]);
 
   return {
     statusCode: 200,
@@ -45,8 +43,8 @@ exports.handler = async (event) => {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "*",
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Methods": "GET",
+      "Access-Control-Allow-Methods": "DELETE",
     },
-    body: JSON.stringify(userTasks),
+    body: JSON.stringify({ message: "Task deleted!" }),
   };
 };

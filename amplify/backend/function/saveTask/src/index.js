@@ -2,8 +2,8 @@ const mysql = require("mysql2");
 const { promisify } = require("util");
 
 const pool = mysql.createPool({
-  host: "tasks-app.ctdju6yvrlfc.us-east-1.rds.amazonaws.com",
-  port: 3306,
+  host: "tasks.ctdju6yvrlfc.us-east-1.rds.amazonaws.com",
+  database: "tasks",
   user: "admin",
   password: "espartanclase3",
 });
@@ -33,13 +33,29 @@ pool.query = promisify(pool.query);
  */
 exports.handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
+  const body = JSON.parse(event.body);
+
+  console.log(event.requestContext);
+  const newTask = body.newTask;
+
+  const userSub = event.requestContext.authorizer.claims.sub;
+
+  const taskWithUserSub = {
+    ...newTask,
+    fk_user: userSub,
+  };
+
+  await pool.query("insert into task set ?", [taskWithUserSub]);
+
   return {
     statusCode: 200,
     //  Uncomment below to enable CORS requests
-    //  headers: {
-    //      "Access-Control-Allow-Origin": "*",
-    //      "Access-Control-Allow-Headers": "*"
-    //  },
-    body: JSON.stringify("Hello from Lambda!"),
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "*",
+      "Access-Control-Allow-Credentials": true,
+      "Access-Control-Allow-Methods": "POST",
+    },
+    body: JSON.stringify("Task saved!"),
   };
 };

@@ -42,8 +42,8 @@ const Layout = ({ children }) => {
               </>
             ) : (
               <>
-                <Button onClick={() => navigate("/Tasks")} color="inherit">
-                  My Tasks
+                <Button onClick={() => navigate("/profile")} color="inherit">
+                  Profile
                 </Button>
                 <Button onClick={handleLogout} color="inherit">
                   Logout

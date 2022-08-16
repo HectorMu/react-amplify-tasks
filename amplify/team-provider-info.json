@@ -24,11 +24,11 @@
         },
         "getTasks": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/getTasks-42735572325768747a68-build.zip"
+          "s3Key": "amplify-builds/getTasks-786e3632393732764b48-build.zip"
         },
         "saveTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/saveTask-73326663384b4737762f-build.zip"
+          "s3Key": "amplify-builds/saveTask-74584369456733735a7a-build.zip"
         },
         "authTest": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
@@ -36,11 +36,19 @@
         },
         "register": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/register-5332694d527074507837-build.zip"
+          "s3Key": "amplify-builds/register-78724a6b326a536a4744-build.zip"
         },
         "otherBranch": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
           "s3Key": "amplify-builds/otherBranch-7345723438724e6f7770-build.zip"
+        },
+        "updateTask": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/updateTask-695a417177434f783653-build.zip"
+        },
+        "deleteTask": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/deleteTask-572b43734451764f4c69-build.zip"
         }
       },
       "auth": {

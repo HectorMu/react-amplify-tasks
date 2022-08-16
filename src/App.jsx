@@ -9,6 +9,7 @@ import SessionProvider from "./context/SessionProvider";
 import { ConfirmSignup } from "./pages/ConfirmSignup";
 import IsLoggedIn from "./components/IsLoggedIn";
 import { Recover } from "./pages/Recover";
+import Tasks from "./pages/Tasks";
 
 Amplify.configure(config);
 
@@ -17,8 +18,9 @@ function App() {
     <SessionProvider>
       <Layout>
         <Routes>
-          <Route path="/" element={<IsLoggedIn view={Profile} />} />
+          <Route path="/" element={<IsLoggedIn view={Tasks} />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/confirm-signup" element={<ConfirmSignup />} />
           <Route path="recover" element={<Recover />} />
