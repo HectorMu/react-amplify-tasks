@@ -4,8 +4,10 @@ import { Hub, Auth } from "aws-amplify";
 export const Session = createContext();
 //The AWS Hub listens when an user is logged, and it saves the cognito
 //identity provider in the localStorage
-const LAST_USER_LS =
-  "CognitoIdentityServiceProvider.66k7aua0jc5laat47gn4g6bgbu.LastAuthUser";
+const LAST_USER_LS = process.env.COGNITO_LS_PROD
+  ? `${process.env.COGNITO_LS_PROD}.LastAuthUser`
+  : "CognitoIdentityServiceProvider.66k7aua0jc5laat47gn4g6bgbu.LastAuthUser";
+
 export default function SessionProvider({ children }) {
   const lastUser = window.localStorage.getItem(LAST_USER_LS);
   console.log(lastUser);

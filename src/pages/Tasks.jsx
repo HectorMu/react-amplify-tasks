@@ -39,15 +39,20 @@ const Tasks = () => {
 
   const getTasks = async () => {
     setLoading(true);
-    const data = await API.get("test", "/tasks/", {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: user.signInUserSession.idToken.jwtToken,
-      },
-    });
+    try {
+      const data = await API.get("test", "/tasks", {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: user.signInUserSession.idToken.jwtToken,
+        },
+      });
 
-    setTasks(data);
-    setLoading(false);
+      setTasks(data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -124,7 +129,9 @@ const Tasks = () => {
           </form>
         </Box>
       </Modal>
-      <TaskList tasks={tasks} loading={loading} getTasks={getTasks} />
+      {tasks.length > 0 && !loading && (
+        <TaskList tasks={tasks} loading={loading} getTasks={getTasks} />
+      )}
     </>
   );
 };
