@@ -24,7 +24,7 @@
         },
         "getTasks": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/getTasks-786e3632393732764b48-build.zip"
+          "s3Key": "amplify-builds/getTasks-6a306b3142456e383431-build.zip"
         },
         "saveTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
@@ -36,7 +36,7 @@
         },
         "register": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/register-78724a6b326a536a4744-build.zip"
+          "s3Key": "amplify-builds/register-784a37314f4a51617a4b-build.zip"
         },
         "otherBranch": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
