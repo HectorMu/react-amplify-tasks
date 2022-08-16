@@ -7,6 +7,7 @@ const pool = mysql.createPool({
   user: "admin",
   password: "espartanclase3",
 });
+
 pool.getConnection((err, connection) => {
   if (err) {
     if (err.code === "PROTOCOL_CONNECTION_LOST") {
@@ -27,7 +28,7 @@ pool.getConnection((err, connection) => {
   }
 });
 
-Dbpool.query = promisify(Dbpool.query);
+pool.query = promisify(pool.query);
 /**
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
