@@ -57,7 +57,7 @@ const Tasks = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (newTask.content || newTask.title)
+    if (!newTask.content || !newTask.title)
       return toast.error("All fields are required");
     try {
       const tLoading = toast.loading("Saving task...");
