@@ -4,7 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Container, Input } from "@mui/material";
+import { Container, Input, Paper } from "@mui/material";
 import toast from "react-hot-toast";
 import { Auth } from "aws-amplify";
 import { useNavigate } from "react-router-dom";
@@ -44,7 +44,7 @@ export const Signup = () => {
 
       console.log(registerRes);
       toast.success("Registered");
-      navigate("/confirm-signup");
+      navigate("/confirm-signup", { state: { username } });
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
@@ -52,21 +52,27 @@ export const Signup = () => {
   };
   return (
     <Container
-      sx={{ marginTop: "50px", display: "flex", justifyContent: "center" }}
+      sx={{
+        marginTop: "100px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        alignContent: "center",
+      }}
     >
-      <Card sx={{ minWidth: 275, maxWidth: 400 }}>
+      <Card sx={{ minWidth: 275, width: 600, boxShadow: 5 }}>
         <form onSubmit={handleSubmit}>
           <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
+            <Typography color="MenuText" align="center" typography={"h4"}>
               Create an account
             </Typography>
 
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+              }}
             >
               <Input
                 type="text"
@@ -88,8 +94,8 @@ export const Signup = () => {
               />
             </div>
           </CardContent>
-          <CardActions>
-            <Button type="submit" size="small">
+          <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+            <Button type="submit" size="small" variant="contained">
               Sign me up
             </Button>
           </CardActions>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -7,9 +7,10 @@ import Typography from "@mui/material/Typography";
 import { Container, Input } from "@mui/material";
 import toast from "react-hot-toast";
 import { Auth } from "aws-amplify";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const ConfirmSignup = () => {
+  const { state } = useLocation();
   const navigate = useNavigate();
   const [confirm, setConfirm] = useState({
     username: "",
@@ -23,16 +24,36 @@ export const ConfirmSignup = () => {
     e.preventDefault();
 
     const { username, code } = confirm;
+    const tLoading = toast.loading("Checking your code...");
     try {
       const res = await Auth.confirmSignUp(username, code);
-      console.log(res);
-      toast.success("Confirmed!");
+      toast.success("Confirmed!", { id: tLoading });
       navigate("/login");
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error("Something went wrong", { id: tLoading });
     }
   };
+
+  const handleResendCode = async () => {
+    if (!confirm.username) return toast.error("Username must be provided");
+
+    const tLoading = toast.loading("Sending a new code...");
+    try {
+      const res = await Auth.resendSignUp(confirm.username);
+      toast.success("Code sended!", { id: tLoading });
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong", { id: tLoading });
+    }
+  };
+  useEffect(() => {
+    if (state) {
+      setConfirm({ ...confirm, username: state.username });
+    }
+  }, [state]);
+
+  console.log(state);
   return (
     <Container
       sx={{ marginTop: "50px", display: "flex", justifyContent: "center" }}
@@ -55,19 +76,45 @@ export const ConfirmSignup = () => {
                 type="text"
                 placeholder="Username"
                 name="username"
+                disabled={state !== null}
                 onChange={handleChange}
+                value={confirm.username}
+                autoComplete={false}
               />
               <Input
                 type="password"
                 placeholder="Code"
                 name="code"
                 onChange={handleChange}
+                value={confirm.code}
+                autoComplete={false}
               />
             </div>
           </CardContent>
-          <CardActions>
-            <Button type="submit" size="small">
+          <CardActions
+            sx={{
+              display: "flex",
+
+              alignContent: "center",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <Button
+              type="submit"
+              size="small"
+              variant="outlined"
+              color="success"
+            >
               Confirm
+            </Button>
+            <Button
+              onClick={handleResendCode}
+              type="button"
+              size="small"
+              variant={"outlined"}
+            >
+              Resend code
             </Button>
           </CardActions>
         </form>
