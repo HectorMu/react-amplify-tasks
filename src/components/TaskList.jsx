@@ -86,17 +86,6 @@ export const TaskList = ({ tasks, loading, getTasks }) => {
     setEditTask(selectedTask);
   }, [selectedTask]);
 
-  if (!tasks.length > 0)
-    return (
-      <Container sx={{ marginTop: "50px" }}>
-        <Card>
-          <CardContent>
-            <h3>You don't have any tasks yet, click new task to create one</h3>
-          </CardContent>
-        </Card>
-      </Container>
-    );
-
   return (
     <>
       <Modal
@@ -181,7 +170,7 @@ export const TaskList = ({ tasks, loading, getTasks }) => {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <CircularProgress />
           </Box>
-        ) : (
+        ) : tasks.length > 0 ? (
           tasks.map((task, i) => (
             <Card key={i} sx={{ marginBottom: "20px", boxShadow: 5 }}>
               <CardContent>
@@ -212,6 +201,14 @@ export const TaskList = ({ tasks, loading, getTasks }) => {
               </CardContent>
             </Card>
           ))
+        ) : (
+          <Card>
+            <CardContent>
+              <h3>
+                You don't have any tasks yet, click new task to create one
+              </h3>
+            </CardContent>
+          </Card>
         )}
       </Container>
     </>
