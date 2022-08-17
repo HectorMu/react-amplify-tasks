@@ -37,7 +37,7 @@ export const Recover = () => {
         setOnConfirm(true);
       } catch (error) {
         console.log(error);
-        toast.error("Something went wrong", { id: tLoading });
+        toast.error(error.message, { id: tLoading });
       }
     } else {
       try {
@@ -49,7 +49,7 @@ export const Recover = () => {
         navigate("/");
       } catch (error) {
         console.log(error);
-        toast.error("Something went wrong", { id: tLoading });
+        toast.error(error.message, { id: tLoading });
       }
     }
   };

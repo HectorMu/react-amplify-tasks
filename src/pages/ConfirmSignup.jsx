@@ -24,6 +24,7 @@ export const ConfirmSignup = () => {
     e.preventDefault();
 
     const { username, code } = confirm;
+    if (!username || !code) return toast.error("All fields are required");
     const tLoading = toast.loading("Checking your code...");
     try {
       const res = await Auth.confirmSignUp(username, code);
@@ -31,7 +32,7 @@ export const ConfirmSignup = () => {
       navigate("/login");
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong", { id: tLoading });
+      toast.error(error.message, { id: tLoading });
     }
   };
 
@@ -44,7 +45,7 @@ export const ConfirmSignup = () => {
       toast.success("Code sended!", { id: tLoading });
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong", { id: tLoading });
+      toast.error(error.message, { id: tLoading });
     }
   };
   useEffect(() => {

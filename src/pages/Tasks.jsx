@@ -57,6 +57,8 @@ const Tasks = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (newTask.content || newTask.title)
+      return toast.error("All fields are required");
     try {
       const tLoading = toast.loading("Saving task...");
       await API.post("test", "/tasks/save", {
@@ -71,6 +73,7 @@ const Tasks = () => {
       getTasks();
     } catch (error) {
       console.log(error);
+      toast.error(error.message, { id: tLoading });
     }
   };
 

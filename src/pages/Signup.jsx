@@ -47,7 +47,7 @@ export const Signup = () => {
       navigate("/confirm-signup", { state: { username } });
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error(error.message, { id: tLoading });
     }
   };
   return (
