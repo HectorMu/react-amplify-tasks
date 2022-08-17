@@ -5,7 +5,7 @@ import { useSession } from "../hooks/useSession";
 const IsLoggedIn = ({ view: View }) => {
   //Extract the user from the Session global context
   const { user } = useSession();
-  console.log(user);
+
   //If there is not a user logged in return to login page
   if (!user) return <Navigate to={"/login"} />;
 

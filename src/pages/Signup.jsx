@@ -24,6 +24,12 @@ export const Signup = () => {
     e.preventDefault();
 
     const { username, password, email } = signup;
+
+    if (!username || !password || !email)
+      return toast.error("All fields are required");
+
+    const tLoading = toast.loading("Registering...");
+
     try {
       const res = await Auth.signUp({
         username,
@@ -43,7 +49,7 @@ export const Signup = () => {
       });
 
       console.log(registerRes);
-      toast.success("Registered");
+      toast.success("Registered", { id: tLoading });
       navigate("/confirm-signup", { state: { username } });
     } catch (error) {
       console.log(error);
@@ -63,7 +69,12 @@ export const Signup = () => {
       <Card sx={{ minWidth: 275, width: 600, boxShadow: 5 }}>
         <form onSubmit={handleSubmit}>
           <CardContent>
-            <Typography color="MenuText" align="center" typography={"h4"}>
+            <Typography
+              color="MenuText"
+              sx={{ marginBottom: "20px" }}
+              align="center"
+              typography={"h4"}
+            >
               Create an account
             </Typography>
 
@@ -94,8 +105,13 @@ export const Signup = () => {
               />
             </div>
           </CardContent>
-          <CardActions sx={{ display: "flex", justifyContent: "center" }}>
-            <Button type="submit" size="small" variant="contained">
+          <CardActions
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Button type="submit" size="small" variant="contained" fullWidth>
               Sign me up
             </Button>
           </CardActions>

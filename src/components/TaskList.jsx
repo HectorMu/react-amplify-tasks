@@ -17,12 +17,12 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: "60%",
   bgcolor: "background.paper",
   border: "2px solid #fff",
   boxShadow: 24,
-  borderRadius: "10px",
-  p: 4,
+  p: 5,
+  maxWidth: 400,
 };
 
 export const TaskList = ({ tasks, loading, getTasks }) => {
@@ -115,34 +115,44 @@ export const TaskList = ({ tasks, loading, getTasks }) => {
                 onChange={handleChange}
                 value={editTask?.content}
               />
-
-              <Button
-                type="submit"
-                variant="outlined"
-                sx={{ fontWeight: "bold" }}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "10px",
+                }}
               >
-                Save
-              </Button>
-              <Button
-                onClick={toggleModal}
-                type="button"
-                variant="outlined"
-                sx={{ fontWeight: "bold" }}
-              >
-                Cancel
-              </Button>
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  sx={{ fontWeight: "bold" }}
+                  fullWidth
+                >
+                  Save
+                </Button>
+                <Button
+                  onClick={toggleModal}
+                  type="button"
+                  variant="outlined"
+                  color="error"
+                  sx={{ fontWeight: "bold" }}
+                  fullWidth
+                >
+                  Cancel
+                </Button>
+              </div>
             </form>
           ) : (
             <>
-              <h1
-                style={{
-                  textAlign: "center",
-                  marginBottom: "30px",
-                  fontWeight: "normal",
-                }}
+              <Typography
+                id="modal-modal-title"
+                variant="h6"
+                component="h2"
+                align="center"
+                sx={{ marginBottom: "20px" }}
               >
                 Delete task: {selectedTask?.title}?
-              </h1>
+              </Typography>
               <div
                 style={{
                   display: "flex",
@@ -152,12 +162,12 @@ export const TaskList = ({ tasks, loading, getTasks }) => {
               >
                 <Button
                   onClick={handleDelete}
-                  variant="contained"
+                  variant="outlined"
                   color={"error"}
                 >
-                  Yes, delete
+                  Delete
                 </Button>
-                <Button onClick={toggleModal} variant="contained">
+                <Button onClick={toggleModal} variant="outlined">
                   Cancel
                 </Button>
               </div>

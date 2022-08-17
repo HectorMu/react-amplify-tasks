@@ -24,6 +24,8 @@ export const Login = () => {
     e.preventDefault();
 
     const { username, password } = login;
+    if (!username || !password) return toast.error("All fields are required");
+
     const tLoading = toast.loading("Verifying...");
     try {
       const res = await Auth.signIn(username, password);
@@ -37,17 +39,24 @@ export const Login = () => {
   };
   return (
     <Container
-      sx={{ marginTop: "50px", display: "flex", justifyContent: "center" }}
+      sx={{
+        marginTop: "100px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        alignContent: "center",
+      }}
     >
-      <Card sx={{ minWidth: 275, maxWidth: 400 }}>
+      <Card sx={{ minWidth: 275, width: 600, boxShadow: 5 }}>
         <form onSubmit={handleSubmit}>
           <CardContent>
             <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
+              sx={{ marginBottom: "20px" }}
+              color="MenuText"
+              align="center"
+              typography={"h4"}
             >
-              Log in to continue
+              Log in
             </Typography>
 
             <div
@@ -67,14 +76,17 @@ export const Login = () => {
               />
             </div>
           </CardContent>
-          <CardActions sx={{ display: "flex", flexDirection: "column" }}>
-            <Button type="submit" size="small">
+          <CardActions
+            sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
+          >
+            <Button type="submit" size="small" variant="contained" fullWidth>
               Log me in
             </Button>
             <Button
               type="button"
               onClick={() => navigate("/recover")}
               size="small"
+              variant="outlined"
             >
               Recover account
             </Button>

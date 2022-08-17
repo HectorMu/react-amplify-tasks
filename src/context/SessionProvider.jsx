@@ -21,7 +21,6 @@ export default function SessionProvider({ children }) {
     Hub.listen("auth", async (data) => {
       const { payload } = data;
       if (payload.event === "signIn") {
-        console.log(data);
         return setUser(payload.data);
       }
     });

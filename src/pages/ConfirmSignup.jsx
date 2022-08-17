@@ -54,18 +54,24 @@ export const ConfirmSignup = () => {
     }
   }, [state]);
 
-  console.log(state);
   return (
     <Container
-      sx={{ marginTop: "50px", display: "flex", justifyContent: "center" }}
+      sx={{
+        marginTop: "100px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        alignContent: "center",
+      }}
     >
-      <Card sx={{ minWidth: 275, maxWidth: 400 }}>
+      <Card sx={{ minWidth: 275, width: 600, boxShadow: 5 }}>
         <form onSubmit={handleSubmit}>
           <CardContent>
             <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
+              sx={{ marginBottom: "20px" }}
+              color="MenuText"
+              align="center"
+              typography={"h5"}
             >
               We sended you a confirmation code to your email
             </Typography>
