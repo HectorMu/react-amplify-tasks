@@ -129,9 +129,8 @@ const Tasks = () => {
           </form>
         </Box>
       </Modal>
-      {tasks.length > 0 && !loading && (
-        <TaskList tasks={tasks} loading={loading} getTasks={getTasks} />
-      )}
+
+      <TaskList tasks={tasks} loading={loading} getTasks={getTasks} />
     </>
   );
 };

@@ -8,9 +8,10 @@ const LAST_USER_LS = process.env.COGNITO_LS_PROD
   ? `${process.env.COGNITO_LS_PROD}.LastAuthUser`
   : "CognitoIdentityServiceProvider.66k7aua0jc5laat47gn4g6bgbu.LastAuthUser";
 
+console.log(LAST_USER_LS);
 export default function SessionProvider({ children }) {
   const lastUser = window.localStorage.getItem(LAST_USER_LS);
-  console.log(lastUser);
+
   //If we have that item in localstorage, so there still is a user logged in
   //this is for persists the auth state on the same page, but a boolean as
   //session state doesnt work for us
