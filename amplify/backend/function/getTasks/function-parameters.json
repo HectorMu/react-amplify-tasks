@@ -1,3 +1,11 @@
 {
-  "lambdaLayers": []
+  "lambdaLayers": [
+    {
+      "type": "ProjectLayer",
+      "resourceName": "reactamplifytasksampTestLayer",
+      "env": "dev",
+      "version": 3,
+      "isLatestVersionSelected": false
+    }
+  ]
 }

@@ -13,7 +13,16 @@
     "getTasks": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "reactamplifytasksampTestLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "authTest": {
       "build": true,
@@ -66,7 +75,16 @@
     "updateTask": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "reactamplifytasksampTestLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "reactamplifytasksampTestLayer": {
       "providerPlugin": "awscloudformation",

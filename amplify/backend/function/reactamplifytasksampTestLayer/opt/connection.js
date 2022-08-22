@@ -1,12 +1,13 @@
 const mysql = require("mysql2");
+const keys = require("./keys");
 
 const { promisify } = require("util");
 
 const pool = mysql.createPool({
-  host: "tasks.ctdju6yvrlfc.us-east-1.rds.amazonaws.com",
-  database: "tasks",
-  user: "admin",
-  password: "espartanclase3",
+  host: keys.host,
+  database: keys.database,
+  user: keys.user,
+  password: keys.password,
 });
 pool.getConnection((err, connection) => {
   if (err) {

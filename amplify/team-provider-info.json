@@ -24,7 +24,7 @@
         },
         "getTasks": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/getTasks-6a306b3142456e383431-build.zip"
+          "s3Key": "amplify-builds/getTasks-7263716c2f4962756649-build.zip"
         },
         "saveTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
@@ -44,7 +44,7 @@
         },
         "updateTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/updateTask-695a417177434f783653-build.zip"
+          "s3Key": "amplify-builds/updateTask-614a7a51624649387752-build.zip"
         },
         "deleteTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
@@ -52,7 +52,7 @@
         },
         "reactamplifytasksampTestLayer": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/reactamplifytasksampTestLayer-LambdaLayerVersion9b9c4cbe-build.zip"
+          "s3Key": "amplify-builds/reactamplifytasksampTestLayer-LambdaLayerVersion6714a274-build.zip"
         }
       },
       "auth": {
