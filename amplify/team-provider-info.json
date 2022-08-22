@@ -139,12 +139,14 @@
         },
         "saveTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
-          "s3Key": "amplify-builds/saveTask-73326663384b4737762f-build.zip"
+          "s3Key": "amplify-builds/saveTask-7a46543074365731434d-build.zip"
         },
         "register": {
           "deploymentBucketName": "amplify-reactamplifytasks-prod-112819-deployment",
-          "s3Key": "amplify-builds/register-513264766848676b7773-build.zip"
-        }
+          "s3Key": "amplify-builds/register-7145673547665553772f-build.zip"
+        },
+        "deleteTask": {},
+        "updateTask": {}
       }
     }
   }
