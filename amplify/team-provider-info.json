@@ -53,10 +53,6 @@
         "reactamplifytasksampTestLayer": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
           "s3Key": "amplify-builds/reactamplifytasksampTestLayer-LambdaLayerVersion9b9c4cbe-build.zip"
-        },
-        "reactamplifytasksLayerPythonTest": {
-          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/reactamplifytasksLayerPythonTest-LambdaLayerVersionc64d127a-build.zip"
         }
       },
       "auth": {

@@ -72,11 +72,6 @@
       "providerPlugin": "awscloudformation",
       "service": "LambdaLayer",
       "build": true
-    },
-    "reactamplifytasksLayerPythonTest": {
-      "providerPlugin": "awscloudformation",
-      "service": "LambdaLayer",
-      "build": true
     }
   },
   "api": {

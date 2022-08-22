@@ -50,9 +50,6 @@ export type AmplifyDependentResourcesAttributes = {
         },
         "reactamplifytasksampTestLayer": {
             "Arn": "string"
-        },
-        "reactamplifytasksLayerPythonTest": {
-            "Arn": "string"
         }
     },
     "api": {
