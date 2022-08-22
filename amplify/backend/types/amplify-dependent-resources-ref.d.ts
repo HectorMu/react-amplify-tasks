@@ -47,6 +47,12 @@ export type AmplifyDependentResourcesAttributes = {
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
+        },
+        "reactamplifytasksampTestLayer": {
+            "Arn": "string"
+        },
+        "reactamplifytasksLayerPythonTest": {
+            "Arn": "string"
         }
     },
     "api": {

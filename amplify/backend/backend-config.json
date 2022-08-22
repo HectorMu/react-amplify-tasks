@@ -24,22 +24,59 @@
     "saveTask": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "reactamplifytasksampTestLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "register": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "reactamplifytasksampTestLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "deleteTask": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "reactamplifytasksampTestLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "updateTask": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "reactamplifytasksampTestLayer": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
+    },
+    "reactamplifytasksLayerPythonTest": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
     }
   },
   "api": {
@@ -50,14 +87,6 @@
         {
           "category": "function",
           "resourceName": "funcHello",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
-        },
-        {
-          "category": "function",
-          "resourceName": "funcTest",
           "attributes": [
             "Name",
             "Arn"

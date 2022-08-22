@@ -28,7 +28,7 @@
         },
         "saveTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/saveTask-74584369456733735a7a-build.zip"
+          "s3Key": "amplify-builds/saveTask-7a46543074365731434d-build.zip"
         },
         "authTest": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
@@ -36,7 +36,7 @@
         },
         "register": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/register-784a37314f4a51617a4b-build.zip"
+          "s3Key": "amplify-builds/register-7145673547665553772f-build.zip"
         },
         "otherBranch": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
@@ -48,7 +48,15 @@
         },
         "deleteTask": {
           "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
-          "s3Key": "amplify-builds/deleteTask-572b43734451764f4c69-build.zip"
+          "s3Key": "amplify-builds/deleteTask-4858505933784e643345-build.zip"
+        },
+        "reactamplifytasksampTestLayer": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/reactamplifytasksampTestLayer-LambdaLayerVersion9b9c4cbe-build.zip"
+        },
+        "reactamplifytasksLayerPythonTest": {
+          "deploymentBucketName": "amplify-reactamplifytasks-dev-131319-deployment",
+          "s3Key": "amplify-builds/reactamplifytasksLayerPythonTest-LambdaLayerVersionc64d127a-build.zip"
         }
       },
       "auth": {

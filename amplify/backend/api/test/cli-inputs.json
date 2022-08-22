@@ -8,13 +8,6 @@
         "setting": "open"
       }
     },
-    "/test": {
-      "name": "/test",
-      "lambdaFunction": "funcTest",
-      "permissions": {
-        "setting": "open"
-      }
-    },
     "/tasks": {
       "name": "/tasks",
       "lambdaFunction": "getTasks",
