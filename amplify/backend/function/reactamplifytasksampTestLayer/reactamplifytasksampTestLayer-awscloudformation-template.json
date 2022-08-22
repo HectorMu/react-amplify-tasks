@@ -20,7 +20,7 @@
     }
   },
   "Resources": {
-    "LambdaLayerVersionfe889e11": {
+    "LambdaLayerVersiondceb5e62": {
       "Type": "AWS::Lambda::LayerVersion",
       "Properties": {
         "CompatibleRuntimes": {
@@ -51,13 +51,48 @@
       "DeletionPolicy": "Delete",
       "UpdateReplacePolicy": "Retain"
     },
-    "LambdaLayerPermissionPublicfe889e11": {
+    "LambdaLayerPermissionPublicdceb5e62": {
       "Type": "AWS::Lambda::LayerVersionPermission",
       "Properties": {
         "Action": "lambda:GetLayerVersion",
         "LayerVersionArn": {
-          "Ref": "LambdaLayerVersionfe889e11"
+          "Ref": "LambdaLayerVersiondceb5e62"
         },
+        "Principal": "*"
+      }
+    },
+    "LambdaLayerVersionfe889e11": {
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "CompatibleRuntimes": [
+          "nodejs14.x"
+        ],
+        "Content": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": "amplify-builds/reactamplifytasksampTestLayer-LambdaLayerVersionfe889e11-build.zip"
+        },
+        "Description": "Updated layer version 2022-08-22T20:01:11.652Z",
+        "LayerName": {
+          "Fn::Sub": [
+            "reactamplifytasksampTestLayer-${env}",
+            {
+              "env": {
+                "Ref": "env"
+              }
+            }
+          ]
+        }
+      },
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Retain"
+    },
+    "LambdaLayerPermissionPublicfe889e11": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": "arn:aws:lambda:us-east-1:857067256181:layer:reactamplifytasksampTestLayer-prod:4",
         "Principal": "*"
       }
     }
@@ -65,7 +100,7 @@
   "Outputs": {
     "Arn": {
       "Value": {
-        "Ref": "LambdaLayerVersionfe889e11"
+        "Ref": "LambdaLayerVersiondceb5e62"
       }
     }
   }
