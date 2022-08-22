@@ -6,7 +6,7 @@ export const Session = createContext();
 //identity provider in the localStorage
 const LAST_USER_LS = import.meta.env.VITE_COGNITO_LS_PROD
   ? `${import.meta.env.VITE_COGNITO_LS_PROD}.LastAuthUser`
-  : "CognitoIdentityServiceProvider.66k7aua0jc5laat47gn4g6bgbu.LastAuthUser";
+  : "CognitoIdentityServiceProvider.650k7rndpikfjkduunaq87e0jo.LastAuthUser";
 
 console.log(LAST_USER_LS);
 export default function SessionProvider({ children }) {

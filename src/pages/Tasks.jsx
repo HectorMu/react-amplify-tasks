@@ -60,8 +60,8 @@ const Tasks = () => {
     e.preventDefault();
     if (!newTask.content || !newTask.title)
       return toast.error("All fields are required");
+    const tLoading = toast.loading("Saving task...");
     try {
-      const tLoading = toast.loading("Saving task...");
       await API.post("test", "/tasks/save", {
         body: { newTask },
         headers: {
