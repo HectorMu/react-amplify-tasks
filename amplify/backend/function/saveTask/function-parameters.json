@@ -4,7 +4,7 @@
       "type": "ProjectLayer",
       "resourceName": "reactamplifytasksampTestLayer",
       "version": 3,
-      "isLatestVersionSelected": false,
+      "isLatestVersionSelected": true,
       "env": "dev"
     }
   ]
