@@ -1,11 +1,10 @@
 {
   "lambdaLayers": [
     {
-      "type": "ProjectLayer",
-      "resourceName": "reactamplifytasksampTestLayer",
-      "version": 3,
-      "isLatestVersionSelected": false,
-      "env": "dev"
+      "type": "ExternalLayer",
+      "arn": {
+        "Fn::Sub": "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:reactamplifytasksampTestLayer-dev:3"
+      }
     }
   ]
 }
