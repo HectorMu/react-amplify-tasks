@@ -50,6 +50,12 @@ export type AmplifyDependentResourcesAttributes = {
         },
         "reactamplifytasksampTestLayer": {
             "Arn": "string"
+        },
+        "BranchTest": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
         }
     },
     "api": {
